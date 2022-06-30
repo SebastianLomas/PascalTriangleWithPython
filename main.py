@@ -5,6 +5,9 @@ def indexExists(myList,index):
     else:
         return False
 
+#You may ask why did i added this function instead of using spread operator
+#Well, when the pascal triangle is printend, numbers with more than two digits
+#ruin the format of the triangle, that's why i created it, I'll fix that.
 def printPascal(rowToPrint):
     index = 0
     lastNumberIndex = len(rowToPrint) - 1
@@ -23,7 +26,7 @@ def main():
     y = 0
 
     while y < numberOfRows:
-        print(" "*initialSpaces,end="")
+        #print(" "*initialSpaces,end="")
         printPascal(currentRow)
         nextRow.append(1)
         i = 0

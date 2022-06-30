@@ -5,6 +5,16 @@ def indexExists(myList,index):
     else:
         return False
 
+def printPascal(rowToPrint):
+    index = 0
+    lastNumberIndex = len(rowToPrint) - 1
+    for currentNumber in rowToPrint:
+        if index == lastNumberIndex:
+            print(currentNumber)
+        else:
+            print(currentNumber,end=" ")
+        index += 1
+
 def main():
     currentRow = [1]
     nextRow = list()
@@ -13,7 +23,8 @@ def main():
     y = 0
 
     while y < numberOfRows:
-        print(" "*initialSpaces,*currentRow)
+        print(" "*initialSpaces,end="")
+        printPascal(currentRow)
         nextRow.append(1)
         i = 0
 
